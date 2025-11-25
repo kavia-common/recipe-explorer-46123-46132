@@ -122,6 +122,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "nested",
+      "rootUri": "file:///home/kavia/.pub-cache/hosted/pub.dev/nested-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "path",
       "rootUri": "file:///home/kavia/.pub-cache/hosted/pub.dev/path-1.9.1",
       "packageUri": "lib/",
@@ -156,6 +162,12 @@
       "rootUri": "file:///home/kavia/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.8",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "provider",
+      "rootUri": "file:///home/kavia/.pub-cache/hosted/pub.dev/provider-6.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
     },
     {
       "name": "shared_preferences",
@@ -272,7 +284,7 @@
       "languageVersion": "3.4"
     }
   ],
-  "generated": "2025-11-25T05:31:34.083468Z",
+  "generated": "2025-11-25T05:53:23.628346Z",
   "generator": "pub",
   "generatorVersion": "3.7.0",
   "flutterRoot": "file:///opt/flutter",
