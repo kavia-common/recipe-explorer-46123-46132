@@ -19,24 +19,21 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.7.0
+  sdk: ">=3.4.0 <4.0.0"
+  flutter: ">=3.22.0 <3.29.0"
 
-# Dependencies specify other packages that your package needs in order to work.
-# To automatically upgrade your package dependencies to the latest versions
-# consider running `flutter pub upgrade --major-versions`. Alternatively,
-# dependencies can be manually updated by changing the version numbers below to
-# the latest version available on pub.dev. To see which dependencies have newer
-# versions available, run `flutter pub outdated`.
+# Keep dependencies minimal to prevent long initial Gradle syncs and native builds.
 dependencies:
   flutter:
     sdk: flutter
-  sqflite: ^2.3.2
-  path: ^1.9.0
-  flutter_dotenv: ^5.1.0
-  provider: ^6.1.1
-  flutter_staggered_grid_view: ^0.7.0
-  shared_preferences: ^2.2.2
-  intl: ^0.19.0
+  # NOTE: Remove heavy/unused native plugins to speed up builds.
+  # sqflite: ^2.3.2        # disabled (unused in current code)
+  # shared_preferences: ^2.2.2 # disabled (unused in current code)
+  # flutter_staggered_grid_view: ^0.7.0 # disabled (unused in current code)
+  # provider: ^6.1.1       # disabled (unused in current code)
+  # flutter_dotenv: ^5.1.0 # disabled (unused in current code)
+  # intl: ^0.19.0          # disabled (unused in current code)
+  # path: ^1.9.0           # disabled (unused in current code)
   cupertino_icons: ^1.0.8
 
 dev_dependencies:
