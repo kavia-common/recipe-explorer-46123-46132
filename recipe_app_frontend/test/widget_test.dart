@@ -12,13 +12,14 @@ void main() {
     // Verify bottom navigation has three destinations (NavigationBar is Material 3)
     expect(find.byType(NavigationBar), findsOneWidget);
 
-    // Placeholder texts exist
-    expect(find.text('Home Feed Placeholder'), findsOneWidget);
+    // Home screen renders header text from HomeScreen
+    expect(find.text('Discover Recipes'), findsOneWidget);
 
     // Switch to Search tab
     await tester.tap(find.text('Search'));
     await tester.pumpAndSettle();
-    expect(find.text('Search Placeholder'), findsOneWidget);
+    // Search app bar title should be visible
+    expect(find.text('Search'), findsOneWidget);
 
     // Switch to Favorites tab
     await tester.tap(find.text('Favorites'));
