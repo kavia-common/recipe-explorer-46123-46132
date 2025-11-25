@@ -3,11 +3,26 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:recipe_app_frontend/main.dart';
 
 void main() {
-  testWidgets('Minimal home renders with Ocean theme and progress', (WidgetTester tester) async {
+  testWidgets('RootScaffold renders tabs with Ocean theme', (WidgetTester tester) async {
     await tester.pumpWidget(const MyApp());
 
-    expect(find.text('Recipe app is ready'), findsOneWidget);
-    expect(find.byType(CircularProgressIndicator), findsOneWidget);
-    expect(find.text('recipe_app_frontend'), findsOneWidget);
+    // AppBar title
+    expect(find.text('Recipe Explorer'), findsOneWidget);
+
+    // Verify bottom navigation has three destinations (NavigationBar is Material 3)
+    expect(find.byType(NavigationBar), findsOneWidget);
+
+    // Placeholder texts exist
+    expect(find.text('Home Feed Placeholder'), findsOneWidget);
+
+    // Switch to Search tab
+    await tester.tap(find.text('Search'));
+    await tester.pumpAndSettle();
+    expect(find.text('Search Placeholder'), findsOneWidget);
+
+    // Switch to Favorites tab
+    await tester.tap(find.text('Favorites'));
+    await tester.pumpAndSettle();
+    expect(find.text('Favorites Placeholder'), findsOneWidget);
   });
 }
